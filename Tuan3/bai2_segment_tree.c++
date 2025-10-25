@@ -55,7 +55,6 @@ int main(){
     }
     long long cnt = 0;
     for(int i = n - 1; i >= 0; --i){
-        // int key = lower_bound(a_unique.begin(), a_unique.end(), a[i]) - a_unique.begin() + 1;
         int key = lower_bound(a_unique, a[i]) + 1;
         int val = getTree(1, 1, n, 1, key - 1);
         updateTree(1, 1, n, key, 1);
